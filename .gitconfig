@@ -1,0 +1,36 @@
+[alias]
+    st = status
+    ch = checkout
+    hist = log --pretty=format:'%C(blue black bold)%h%Creset %ad | %C(green bold)%s%Creset%C(yellow)%d%Creset [%C(cyan)%an%Creset]' --graph --date=short
+    df = diff --cached
+[branch "master"]
+    rebase = true
+[branch]
+    autosetuprebase = always
+[color]
+    ui = auto
+    grep = true
+[color "diff"]
+    whitespace = blue reverse
+    meta = blue black bold
+[color "grep"]
+    match = red bold
+[commit]
+    status = true
+[core]
+    editor = vim
+    bigFileThreshold = 100k
+    autocrlf = input
+[format]
+    pretty = format:%C(blue black bold)%h%Creset %C(green bold)%s%Creset%C(yellow)%d%Creset [%C(cyan)%an%Creset] - %ar
+[push]
+    default = current
+[user]
+    name = Álex Cortiñas
+    email = mail@alexcortinas.es
+[web]
+    browser = google-chrome
+[http]
+    sslverify = false
+[credential]
+    helper = cache --timeout=3600
